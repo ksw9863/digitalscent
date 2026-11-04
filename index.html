@@ -1766,6 +1766,28 @@
       nav ul { flex-wrap: nowrap; }
       nav a { white-space: nowrap; }
     }
+
+    /* ===== [모바일 메인 페이지 레이아웃 수정] (PC 화면 영향 없음: 900px 이하에서만 적용) =====
+       원인: 1열 그리드(1fr)가 카테고리 칩의 '줄바꿈 없음' 너비까지 늘어나 오른쪽 영역이 화면 밖으로 밀렸음 */
+    @media (max-width: 900px) {
+      .main-layout { grid-template-columns: minmax(0, 1fr); }
+      .main-layout > * { min-width: 0; max-width: 100%; }
+      .category-sidebar { width: 100%; max-width: 100%; overflow: hidden; }
+      /* 카테고리 칩: 옆으로 잘리지 않고 줄바꿈되어 전부 보이도록 */
+      .sidebar-menu-list { display: flex; flex-wrap: wrap; gap: 8px; overflow: visible; padding: 0; margin: 0; }
+      .sidebar-menu-list li { flex: 0 0 auto; max-width: 100%; }
+      .sidebar-menu-btn { width: auto; max-width: 100%; margin-bottom: 0; white-space: nowrap; }
+      .sidebar-menu-btn span { white-space: nowrap; }
+      .product-grid { min-width: 0; }
+    }
+    @media (max-width: 600px) {
+      .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .product-card { min-width: 0; }
+      .product-title, .product-desc { overflow-wrap: anywhere; }
+    }
+    @media (max-width: 340px) {
+      .product-grid { grid-template-columns: minmax(0, 1fr); }
+    }
   </style>
 </head>
 <body>
