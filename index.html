@@ -1254,6 +1254,10 @@
     .pi-floral { background: linear-gradient(135deg, #f6d6df, #d894ac) !important; }
     .pi-fruity { background: linear-gradient(135deg, #f8dcc6, #e5a08b) !important; }
     .pi-woody  { background: linear-gradient(135deg, #cdb8a3, #7d6350) !important; }
+    .pi-spicy    { background: linear-gradient(135deg, #f1c7a8, #b5533c) !important; }
+    .pi-gourmand { background: linear-gradient(135deg, #ead6bd, #a8744a) !important; }
+    .pi-musk     { background: linear-gradient(135deg, #e6dcee, #a99bbd) !important; }
+    .pi-amber    { background: linear-gradient(135deg, #e3b66f, #6e3b2a) !important; }
 
     /* ---- AI 취향 진단 ---- */
     .quiz-head { text-align: center; margin: 40px 0 24px; }
@@ -1340,6 +1344,10 @@
     .sc-floral { background-image: linear-gradient(to bottom, rgba(0,0,0,.30), rgba(0,0,0,.08) 50%, rgba(0,0,0,.45)), url('images/card_floral.jpg'), linear-gradient(135deg, #ecaabd, #b8567a); }
     .sc-fruity { background-image: linear-gradient(to bottom, rgba(0,0,0,.30), rgba(0,0,0,.08) 50%, rgba(0,0,0,.45)), url('images/card_sweet.jpg'), linear-gradient(135deg, #f3b190, #c9657a); }
     .sc-woody  { background-image: linear-gradient(to bottom, rgba(0,0,0,.30), rgba(0,0,0,.08) 50%, rgba(0,0,0,.45)), url('images/card_woody.jpg'), linear-gradient(135deg, #8b6a4f, #3e2e25); }
+    .sc-spicy { background-image: linear-gradient(to bottom, rgba(0,0,0,.30), rgba(0,0,0,.08) 50%, rgba(0,0,0,.45)), url('images/card_spicy.jpg'), linear-gradient(135deg, #c8643e, #5c2418); }
+    .sc-gourmand { background-image: linear-gradient(to bottom, rgba(0,0,0,.30), rgba(0,0,0,.08) 50%, rgba(0,0,0,.45)), url('images/card_gourmand.jpg'), linear-gradient(135deg, #b98657, #4a3022); }
+    .sc-musk { background-image: linear-gradient(to bottom, rgba(0,0,0,.30), rgba(0,0,0,.08) 50%, rgba(0,0,0,.45)), url('images/card_musk.jpg'), linear-gradient(135deg, #bfb1d3, #6d6285); }
+    .sc-amber { background-image: linear-gradient(to bottom, rgba(0,0,0,.30), rgba(0,0,0,.08) 50%, rgba(0,0,0,.45)), url('images/card_amber.jpg'), linear-gradient(135deg, #c98a3c, #3b1d17); }
     .card-title-lg { font-size: 1.35rem; }
     .card-match-badge { display: inline-block; margin-top: 8px; font-size: 0.7rem; font-weight: 700; letter-spacing: .06em; background: rgba(255,255,255,.92); color: #232a30; padding: 4px 10px; border-radius: 20px; }
     .card-reason { font-size: 0.74rem; color: var(--text-muted); margin: 12px 0 10px; line-height: 1.45; }
@@ -1900,6 +1908,10 @@
           <li><button class="sidebar-menu-btn" onclick="filterMainCategory('floral', this)"><span>플로럴 (Floral)</span><span>&rsaquo;</span></button></li>
           <li><button class="sidebar-menu-btn" onclick="filterMainCategory('fruity', this)"><span>프루티 (Fruity)</span><span>&rsaquo;</span></button></li>
           <li><button class="sidebar-menu-btn" onclick="filterMainCategory('woody', this)"><span>우디 (Woody)</span><span>&rsaquo;</span></button></li>
+          <li><button class="sidebar-menu-btn" onclick="filterMainCategory('spicy', this)"><span>스파이시 (Spicy)</span><span>&rsaquo;</span></button></li>
+          <li><button class="sidebar-menu-btn" onclick="filterMainCategory('gourmand', this)"><span>구르망 (Gourmand)</span><span>&rsaquo;</span></button></li>
+          <li><button class="sidebar-menu-btn" onclick="filterMainCategory('musk', this)"><span>머스크 (Musk)</span><span>&rsaquo;</span></button></li>
+          <li><button class="sidebar-menu-btn" onclick="filterMainCategory('amber', this)"><span>앰버 (Amber)</span><span>&rsaquo;</span></button></li>
         </ul>
       </aside>
 
@@ -2016,6 +2028,10 @@
                 <option value="p4">FORMULA #403 BLOOMING ROSE (플로럴)</option>
                 <option value="p5">FORMULA #602 SWEET FIG &amp; PEACH (프루티)</option>
                 <option value="p6">FORMULA #802 SILENT FOREST (우디)</option>
+                <option value="p7">FORMULA #702 WARM SPICE (스파이시)</option>
+                <option value="p8">FORMULA #306 CARAMEL LATTE (구르망)</option>
+                <option value="p9">FORMULA #302 SOFT MUSK (머스크)</option>
+                <option value="p10">FORMULA #902 AMBER NIGHT (앰버)</option>
               </select>
             </div>
           </div>
@@ -2129,6 +2145,10 @@
             <input type="checkbox" id="my_cat_floral" class="chip-checkbox"><label for="my_cat_floral" class="chip-label">🌸 플로럴</label>
             <input type="checkbox" id="my_cat_fruity" class="chip-checkbox"><label for="my_cat_fruity" class="chip-label">🍑 프루티</label>
             <input type="checkbox" id="my_cat_woody" class="chip-checkbox"><label for="my_cat_woody" class="chip-label">🌲 우디</label>
+            <input type="checkbox" id="my_cat_spicy" class="chip-checkbox"><label for="my_cat_spicy" class="chip-label">🌶️ 스파이시</label>
+            <input type="checkbox" id="my_cat_gourmand" class="chip-checkbox"><label for="my_cat_gourmand" class="chip-label">☕ 구르망</label>
+            <input type="checkbox" id="my_cat_musk" class="chip-checkbox"><label for="my_cat_musk" class="chip-label">🪻 머스크</label>
+            <input type="checkbox" id="my_cat_amber" class="chip-checkbox"><label for="my_cat_amber" class="chip-label">🕯️ 앰버</label>
           </div>
         </div>
         <div class="form-group">
@@ -2274,6 +2294,10 @@
             <input type="checkbox" id="reg_cat_floral" class="chip-checkbox"><label for="reg_cat_floral" class="chip-label">🌸 플로럴</label>
             <input type="checkbox" id="reg_cat_fruity" class="chip-checkbox"><label for="reg_cat_fruity" class="chip-label">🍑 프루티</label>
             <input type="checkbox" id="reg_cat_woody" class="chip-checkbox"><label for="reg_cat_woody" class="chip-label">🌲 우디</label>
+            <input type="checkbox" id="reg_cat_spicy" class="chip-checkbox"><label for="reg_cat_spicy" class="chip-label">🌶️ 스파이시</label>
+            <input type="checkbox" id="reg_cat_gourmand" class="chip-checkbox"><label for="reg_cat_gourmand" class="chip-label">☕ 구르망</label>
+            <input type="checkbox" id="reg_cat_musk" class="chip-checkbox"><label for="reg_cat_musk" class="chip-label">🪻 머스크</label>
+            <input type="checkbox" id="reg_cat_amber" class="chip-checkbox"><label for="reg_cat_amber" class="chip-label">🕯️ 앰버</label>
           </div>
         </div>
         <div class="form-group">
@@ -2403,13 +2427,34 @@
         keywords: ['우디', '차분', '지적', '겨울', '가을', '미팅', '묵직', '시더우드'],
         expr: ['무거운', '포근함'], seasons: ['가을', '겨울'], tpos: ['비즈니스', '데이트'], objs: ['자기만족', '선물용'], gender: ['Masculine', 'Unisex'], intensity: 26, mbti: 'IT', mood: '고요',
         quote: '"자연 속에서 가장 편안해져요."',
-        notes: [{ icon: '🌲', name: '시더우드' }, { icon: '🪵', name: '베티버' }, { icon: '☁️', name: '머스크' }] }
+        notes: [{ icon: '🌲', name: '시더우드' }, { icon: '🪵', name: '베티버' }, { icon: '☁️', name: '머스크' }] },
+      { id: 'p7', title: 'FORMULA #702 WARM SPICE', price: 139000, category: 'spicy', categoryKr: '스파이시', desc: '핑크 페퍼의 톡 쏘는 첫인상과 카다멈 · 시나몬의 따뜻한 온기', icon: '🌶️', image: 'images/p7_spice.jpg',
+        keywords: ['스파이시', '향신료', '따뜻', '시나몬', '후추', '가을', '겨울', '강렬', '개성', '카다멈'],
+        expr: ['포근함', '무거운'], seasons: ['가을', '겨울'], tpos: ['데이트', '일상'], objs: ['자기만족', '계절감 연출'], gender: ['Unisex', 'Masculine'], intensity: 24, mbti: 'EN', mood: '온기',
+        quote: '"차가운 바람에도 마음은 따뜻하게."',
+        notes: [{ icon: '🌶️', name: '핑크 페퍼' }, { icon: '🫛', name: '카다멈' }, { icon: '🍂', name: '시나몬' }] },
+      { id: 'p8', title: 'FORMULA #306 CARAMEL LATTE', price: 139000, category: 'gourmand', categoryKr: '구르망', desc: '로스팅한 커피와 달콤한 카라멜, 통카빈이 감싸는 디저트 같은 향', icon: '☕', image: 'images/p8_gourmand.jpg',
+        keywords: ['구르망', '커피', '카페', '카라멜', '디저트', '달콤', '라떼', '따뜻', '포근'],
+        expr: ['달콤함', '포근함'], seasons: ['가을', '겨울'], tpos: ['일상', '데이트'], objs: ['기분 전환', '자기만족'], gender: ['Feminine', 'Unisex'], intensity: 22, mbti: 'IF', mood: '카페',
+        quote: '"달콤한 커피 한 잔의 여유처럼."',
+        notes: [{ icon: '☕', name: '커피' }, { icon: '🍮', name: '카라멜' }, { icon: '🫘', name: '통카빈' }] },
+      { id: 'p9', title: 'FORMULA #302 SOFT MUSK', price: 139000, category: 'musk', categoryKr: '머스크', desc: '보송한 아이리스 파우더와 샌달우드, 머스크가 만드는 깨끗한 살냄새', icon: '🪻', image: 'images/p9_musk.jpg',
+        keywords: ['머스크', '파우더', '보송', '비누', '깨끗', '살냄새', '포근', '데일리', '아이리스', '은은'],
+        expr: ['포근함', '청량함'], seasons: ['봄', '겨울'], tpos: ['일상', '비즈니스'], objs: ['선물용', '자기만족'], gender: ['Unisex', 'Feminine'], intensity: 14, mbti: 'IF', mood: '보송',
+        quote: '"갓 세탁한 리넨처럼 편안하게."',
+        notes: [{ icon: '🪻', name: '아이리스' }, { icon: '🪵', name: '샌달우드' }, { icon: '☁️', name: '머스크' }] },
+      { id: 'p10', title: 'FORMULA #902 AMBER NIGHT', price: 139000, category: 'amber', categoryKr: '앰버', desc: '따뜻한 앰버 수지와 인센스, 파출리가 깊게 번지는 관능적인 밤의 향', icon: '🕯️', image: 'images/p10_amber.jpg',
+        keywords: ['앰버', '인센스', '밤', '관능', '고급', '깊은', '파출리', '신비', '파티', '겨울'],
+        expr: ['무거운', '포근함'], seasons: ['가을', '겨울'], tpos: ['데이트', '비즈니스'], objs: ['자기만족', '선물용'], gender: ['Unisex', 'Masculine'], intensity: 30, mbti: 'IN', mood: '깊은 밤',
+        quote: '"깊어가는 밤, 잔향이 오래 남도록."',
+        notes: [{ icon: '🍯', name: '앰버' }, { icon: '🕯️', name: '인센스' }, { icon: '🌱', name: '파출리' }] }
     ];
 
     // 취향 옵션 (회원가입 / 마이페이지 / AI 취향 진단 공통)
     const CAT_OPTS = [
       { v: 'citrus', label: '시트러스', icon: '🍋' }, { v: 'green', label: '그린', icon: '🍃' }, { v: 'aqua', label: '아쿠아', icon: '🌊' },
-      { v: 'floral', label: '플로럴', icon: '🌸' }, { v: 'fruity', label: '프루티', icon: '🍑' }, { v: 'woody', label: '우디', icon: '🌲' }
+      { v: 'floral', label: '플로럴', icon: '🌸' }, { v: 'fruity', label: '프루티', icon: '🍑' }, { v: 'woody', label: '우디', icon: '🌲' },
+      { v: 'spicy', label: '스파이시', icon: '🌶️' }, { v: 'gourmand', label: '구르망', icon: '☕' }, { v: 'musk', label: '머스크', icon: '🪻' }, { v: 'amber', label: '앰버', icon: '🕯️' }
     ];
     const CAT_KEYS = CAT_OPTS.map(o => o.v);
     const EXPR_MAP = { fresh: '상큼함', cool: '청량함', cozy: '포근함', sweet: '달콤함', heavy: '무거운' };
@@ -2709,7 +2754,18 @@
       '바닐라':     { stage: '잔향',    desc: '난초과 바닐라 빈 꼬투리에서 얻는 향. 주성분인 바닐린이 따뜻하고 크리미한 단맛을 만들어 과일 향을 디저트처럼 감싸며 잔향을 포근하게 이어 줍니다.', origin: '추출: 바닐라 빈 · 주산지: 마다가스카르 등 · 계열: 발사믹 · 구르망' },
       '시더우드':   { stage: '중간~잔향', desc: '삼나무 목재를 증류한 오일. 연필심과 마른 나무를 닮은 건조하고 깔끔한 우디 향으로 향 전체의 단단한 뼈대가 됩니다.', origin: '추출: 목재 증류 · 계열: 우디' },
       '베티버':     { stage: '잔향',    desc: '벼과 식물 베티버(Vetiveria zizanioides)의 뿌리를 증기 증류한 오일. 흙내음과 스모키함, 자몽 껍질 같은 쌉싸름한 뉘앙스를 지닌 깊고 묵직한 우디 향입니다.', origin: '추출: 뿌리 증기 증류 · 주산지: 아이티 · 인도네시아' },
-      '머스크':     { stage: '잔향',    desc: '포근하고 따뜻한 피부 같은 질감을 주는 머스크. 우디 향의 묵직함을 부드럽게 다듬고 은은한 여운을 오래 남겨 줍니다.', origin: '구성: 합성 머스크 · 계열: 머스크' }
+      '머스크':     { stage: '잔향',    desc: '포근하고 따뜻한 피부 같은 질감을 주는 머스크. 우디 향의 묵직함을 부드럽게 다듬고 은은한 여운을 오래 남겨 줍니다.', origin: '구성: 합성 머스크 · 계열: 머스크' },
+      '핑크 페퍼':  { stage: '첫 향',   desc: '핑크 페퍼콘(Schinus molle) 열매에서 얻는 향. 후추보다 밝고 가벼운 톡 쏘는 스파이시함에 은은한 과일·장미 같은 뉘앙스가 있어 첫인상을 생기 있게 열어 줍니다.', origin: '추출: 열매 증류 · 계열: 스파이시' },
+      '카다멈':     { stage: '중간 향', desc: '생강과 식물 카다멈(Elettaria cardamomum) 씨앗을 증류한 오일. 상쾌한 허브·시트러스 느낌에 따뜻하고 달큰한 스파이스 향이 어우러져 향의 중심에 온기를 더합니다.', origin: '추출: 씨앗 증기 증류 · 주산지: 인도 · 과테말라' },
+      '시나몬':     { stage: '중간~잔향', desc: '계피나무(Cinnamomum) 껍질이나 잎에서 얻는 향. 달콤하고 따뜻한 스파이스 향으로, 겨울철 포근한 분위기를 만들며 잔향을 따뜻하게 이어 줍니다.', origin: '추출: 껍질·잎 증류 · 계열: 스파이시 · 발사믹' },
+      '커피':       { stage: '중간 향', desc: '로스팅한 커피 원두의 고소하고 쌉싸름한 향을 표현한 노트. 실제 원두 추출물과 향료 조합으로 구현되며 달콤한 노트와 만나면 라떼처럼 부드러운 구르망 향이 됩니다.', origin: '추출: 원두 추출물 · 구성: 구르망 어코드' },
+      '카라멜':     { stage: '중간~잔향', desc: '설탕을 졸인 듯한 고소하고 달콤한 캐러멜 어코드. 말톨, 에틸말톨 같은 향 분자로 구현되며 커피의 쌉싸름함을 둥글게 감싸 디저트 같은 질감을 만듭니다.', origin: '구성: 구르망 어코드(향료 조합)' },
+      '통카빈':     { stage: '잔향',    desc: '남미 통카나무 씨앗에서 얻는 향. 바닐라와 아몬드, 건초를 닮은 달콤하고 포근한 향(쿠마린)으로 잔향을 부드럽고 오래 남겨 줍니다.', origin: '추출: 씨앗 · 주산지: 남미 · 계열: 구르망 · 발사믹' },
+      '아이리스':   { stage: '첫~중간 향', desc: '아이리스(붓꽃) 뿌리줄기를 오래 건조·숙성해 얻는 향. 분가루처럼 보송한 파우더리함에 은은한 우디·흙 내음이 있어 고급스럽고 차분한 질감을 줍니다. 원료가 귀해 향수에서 가장 값비싼 천연 원료로 꼽힙니다.', origin: '추출: 뿌리줄기 · 계열: 파우더리 · 플로럴' },
+      '샌달우드':   { stage: '잔향',    desc: '백단나무 심재에서 얻는 오일. 부드럽고 크리미한 우디 향에 은은한 단맛이 있어 아이리스와 머스크를 매끄럽게 이어 주고 잔향을 오래 유지시킵니다.', origin: '추출: 심재 증류 · 계열: 우디 · 크리미' },
+      '앰버':       { stage: '잔향',    desc: '수지와 바닐라, 라브다넘 등을 조합해 만드는 따뜻한 앰버 어코드. 꿀과 가죽, 달콤한 수지를 닮은 풍부하고 관능적인 향으로 깊은 여운을 남깁니다.', origin: '구성: 앰버 어코드(수지·바닐라 조합) · 계열: 오리엔탈' },
+      '인센스':     { stage: '중간~잔향', desc: '유향(프랑킨센스) 같은 수지를 태울 때 피어오르는 향을 표현한 노트. 은은한 연기와 건조한 허브·우디, 레진 향이 어우러져 신비롭고 차분한 분위기를 만듭니다.', origin: '추출: 수지 · 계열: 발사믹 · 스모키' },
+      '파출리':     { stage: '잔향',    desc: '꿀풀과 식물 파출리(Pogostemon cablin)의 잎을 발효·증류한 오일. 흙과 젖은 나무, 은은한 단맛이 있는 짙고 깊은 향으로 향 전체의 뿌리를 단단히 잡아 줍니다.', origin: '추출: 잎 증류 · 주산지: 인도네시아 · 계열: 우디 · 어시' }
     };
 
     const PRODUCT_DETAIL = {
@@ -2718,7 +2774,11 @@
       p3: { intro: '오션 어코드가 만드는 투명한 바다 바람에 씨솔트의 짭조름함, 미네랄의 단단하고 깨끗한 질감을 더한 아쿠아 향입니다. 가볍고 깔끔해 여름 · 여행 · 비즈니스 자리에 부담 없이 어울립니다.' },
       p4: { intro: '만개한 장미의 달콤하고 촉촉한 꽃잎 향에 투명한 피오니를 겹치고, 화이트 머스크의 보송한 잔향으로 마무리한 모던 플로럴입니다. 로맨틱하면서도 과하지 않아 데이트나 선물용으로 좋습니다.' },
       p5: { intro: '잘 익은 피치의 과즙과 무화과의 부드러운 과육 · 잎 향이 어우러지고, 바닐라의 따뜻한 단맛이 잔향을 감싸는 프루티 향입니다. 달콤하지만 무겁지 않아 데일리로 쓰기 좋습니다.' },
-      p6: { intro: '시더우드의 건조한 나무 향, 베티버 뿌리의 깊고 스모키한 흙내음, 머스크의 포근한 여운이 쌓이는 묵직한 우디 향입니다. 지적이고 차분한 분위기로 가을 · 겨울이나 미팅 자리에 어울립니다.' }
+      p6: { intro: '시더우드의 건조한 나무 향, 베티버 뿌리의 깊고 스모키한 흙내음, 머스크의 포근한 여운이 쌓이는 묵직한 우디 향입니다. 지적이고 차분한 분위기로 가을 · 겨울이나 미팅 자리에 어울립니다.' },
+      p7: { intro: '핑크 페퍼의 톡 쏘는 첫 향 뒤로 카다멈의 상쾌하고 달큰한 스파이스, 시나몬의 따뜻한 단맛이 이어지는 스파이시 향입니다. 차가운 계절에도 온기가 느껴져 가을 · 겨울 데이트나 개성을 드러내고 싶은 날에 어울립니다.' },
+      p8: { intro: '로스팅한 커피의 고소한 쌉싸름함에 카라멜의 달콤함을 더하고, 통카빈의 포근한 잔향으로 마무리한 구르망 향입니다. 카페에서 라떼를 마시는 듯한 편안함이 있어 일상과 데이트에 두루 어울립니다.' },
+      p9: { intro: '아이리스의 보송한 파우더리함에 샌달우드의 크리미한 우디 향, 머스크의 포근한 여운이 겹쳐지는 부드러운 머스크 향입니다. 갓 세탁한 리넨 같은 깨끗한 살냄새라 데일리나 비즈니스, 선물용으로 부담 없이 쓸 수 있습니다.' },
+      p10: { intro: '따뜻하고 달콤한 앰버 어코드에 인센스의 은은한 연기, 파출리의 깊은 흙내음이 쌓이는 관능적인 앰버 향입니다. 잔향이 길고 묵직해 가을 · 겨울 저녁이나 분위기 있는 자리에서 존재감을 남깁니다.' }
     };
 
     function openProductDetail(pid) {
@@ -2834,7 +2894,8 @@
       btn.classList.add('active');
       const titleMap = {
         all: '전체 향수 컬렉션', citrus: '시트러스 (Citrus) 컬렉션', green: '그린 (Green) 컬렉션', aqua: '아쿠아 (Aqua) 컬렉션',
-        floral: '플로럴 (Floral) 컬렉션', fruity: '프루티 (Fruity) 컬렉션', woody: '우디 (Woody) 컬렉션'
+        floral: '플로럴 (Floral) 컬렉션', fruity: '프루티 (Fruity) 컬렉션', woody: '우디 (Woody) 컬렉션',
+        spicy: '스파이시 (Spicy) 컬렉션', gourmand: '구르망 (Gourmand) 컬렉션', musk: '머스크 (Musk) 컬렉션', amber: '앰버 (Amber) 컬렉션'
       };
       document.getElementById('categoryDisplayTitle').innerText = titleMap[catKey] || '향수 컬렉션';
       renderMainProducts(catKey);
@@ -3266,7 +3327,7 @@
               <span class="card-sub">FORMULA #${escapeHtml(formulaNo(p))} · ${escapeHtml(p.categoryKr)}</span>
               <div><span class="card-match-badge">${r.pct}% MATCH${r.pct >= 75 ? ' · ✓ 내 취향 일치' : ''}</span></div>
             </div>
-            <span class="card-badge-sm">No.${idx + 1} / 0${ALL_PRODUCTS.length}</span>
+            <span class="card-badge-sm">No.${idx + 1} / ${String(ALL_PRODUCTS.length).padStart(2, '0')}</span>
           </div>
           <div>
             <p class="card-quote">${escapeHtml(p.quote)}</p>
